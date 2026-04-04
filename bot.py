@@ -1207,7 +1207,7 @@ async def cmd_clearwarnings(ctx: commands.Context, member: discord.Member):
     data["warnings"][str(member.id)] = 0
     await ctx.reply(f"✅ Cleared all warnings for **{member.display_name}**. Nezuko forgives you~ 🌸")
 
-@clearwarnings.error
+@cmd_clearwarnings.error
 async def clearwarnings_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.reply("❌ Only moderators can clear warnings!")
