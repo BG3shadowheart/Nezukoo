@@ -1,8 +1,0 @@
-[phases.setup]
-aptPkgs = ["...", "libffi-dev", "libnacl-dev", "python3-dev", "ffmpeg"]
-
-[phases.build]
-cmds = ["pip install -r requirements.txt"]
-
-[start]
-cmd = "python bot.py"
